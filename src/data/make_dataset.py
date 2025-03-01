@@ -142,9 +142,10 @@ acc_df, gyr_df = read_data_from_files(files)
 # --------------------------------------------------------------
 
 data_merged = pd.concat([acc_df.iloc[:,:3], gyr_df], axis = 1)
+
 data_merged.columns = [
     'acc_x',
-    'acc-y',
+    'acc_y',
     'acc_z',
     'gyr_x', 
     'gyr_y',
@@ -162,7 +163,7 @@ data_merged.columns = [
 # Gyroscope:        25.000Hz
 sampling = {
     'acc_x': "mean",
-    'acc-y': "mean",
+    'acc_y': "mean",
     'acc_z': "mean",
     'gyr_x': "mean", 
     'gyr_y': "mean",
